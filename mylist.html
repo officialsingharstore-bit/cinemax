@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List | CinemaX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">CinemaX</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mylist.html" class="active">My List</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div id="userProfileBtn">
+                <img src="https://i.pravatar.cc/40" style="border-radius: 4px;">
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 8rem;">
+        <section class="section" id="traktSyncSection" style="background: rgba(237, 28, 36, 0.1); border: 1px solid var(--primary-color); border-radius: 12px; padding: 2rem; margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3>Sync with Trakt.tv</h3>
+                    <p style="color: var(--text-secondary);">Keep your watchlist and history in sync across all devices.</p>
+                </div>
+                <button class="btn btn-primary" id="connectTraktBtn"><i class="fab fa-trakt"></i> Connect Trakt</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 style="margin-bottom: 2rem;">My Watchlist</h1>
+            <div class="movie-grid" id="watchlistGrid">
+                <!-- Watchlist items will be injected here -->
+                <p id="loadingMsg">Checking your list...</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 style="margin-bottom: 2rem;">My Favorites</h1>
+            <div class="movie-grid" id="favoritesGrid">
+                <!-- Favorites items will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/pages/mylist.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Details | CinemaX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">CinemaX</a>
+        <div class="nav-actions">
+            <a href="index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </nav>
+
+    <main id="detailContent">
+        <!-- Hero Section -->
+        <section class="hero" id="detailHero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" id="titleName">Loading...</h1>
+                <div class="hero-meta">
+                    <span class="rating-badge" id="voteAverage">...</span>
+                    <span id="releaseYear">...</span>
+                    <span id="runtime">...</span>
+                    <span id="genres">...</span>
+                </div>
+                <p class="hero-overview" id="overview">...</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary" id="playBtn"><i class="fas fa-play"></i> Watch Now</button>
+                    <button class="btn btn-secondary" id="trailerBtn"><i class="fas fa-video"></i> Trailer</button>
+                    <button class="btn btn-secondary" id="watchlistBtn"><i class="fas fa-plus"></i> Watchlist</button>
+                    <button class="btn btn-secondary" id="favoriteBtn"><i class="fas fa-heart"></i> Favorite</button>
+                </div>
+            </div>
+            <img src="" alt="" class="hero-backdrop" id="backdrop">
+        </section>
+
+        <!-- TV Season Selector (Conditional) -->
+        <section class="section" id="seasonSection" style="display: none;">
+            <div class="section-title">Seasons & Episodes</div>
+            <div class="season-selector-container">
+                <select id="seasonSelector" class="btn btn-secondary" style="margin-bottom: 1.5rem; width: 200px;">
+                    <!-- Seasons injected by JS -->
+                </select>
+                <div class="movie-grid" id="episodeGrid">
+                    <!-- Episodes injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cast -->
+        <section class="section">
+            <div class="section-title">Full Cast & Crew</div>
+            <div class="movie-grid" id="castGrid" style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));">
+                <!-- Cast cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="section">
+            <div class="section-title">User Reviews</div>
+            <div id="reviewList" style="margin-bottom: 2rem;">
+                <p style="color: var(--text-secondary);">No reviews yet. Be the first!</p>
+            </div>
+            
+            <div id="addReviewSection" style="background: var(--card-bg); padding: 2rem; border-radius: 12px;">
+                <h4 style="margin-bottom: 1rem;">Write a Review</h4>
+                <textarea id="reviewText" style="width: 100%; height: 100px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: white; padding: 1rem; margin-bottom: 1rem; outline: none;"></textarea>
+                <button class="btn btn-primary" id="submitReviewBtn">Post Review</button>
+            </div>
+        </section>
+
+        <!-- Similar -->
+        <section class="section">
+            <div class="section-title">Similar Titles</div>
+            <div class="movie-grid" id="similarGrid">
+                <!-- Similar cards injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Video Player -->
+    <div id="videoModal" class="search-overlay">
+        <div class="search-results-container" style="height: 80vh; margin-top: 2rem;">
+            <div id="playerContainer" style="width: 100%; height: 100%; background: #000; border-radius: 12px; overflow: hidden; position: relative;">
+                <!-- Video player iframe or custom player injected here -->
+            </div>
+            <button class="btn btn-secondary close-search" id="closePlayer"><i class="fas fa-times"></i> Close</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/pages/detail.js"></script>
+</body>
+</html>

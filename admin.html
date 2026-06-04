@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CinemaX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .admin-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+        .admin-sidebar {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-right: 1px solid var(--glass-border);
+        }
+        .admin-content {
+            padding: 4rem;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2 style="color: var(--primary-color); margin-bottom: 3rem;">CinemaX Admin</h2>
+            <ul class="nav-links" style="display: flex; flex-direction: column; gap: 1rem;">
+                <li><a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fas fa-film"></i> Content</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li style="margin-top: 5rem;"><a href="index.html"><i class="fas fa-arrow-left"></i> Exit Admin</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <header style="margin-bottom: 4rem;">
+                <h1>Dashboard Overview</h1>
+                <p style="color: var(--text-secondary);">Manage your streaming platform and monitor performance.</p>
+            </header>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <div class="stat-card">
+                    <div class="stat-value">12.5K</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">842</div>
+                    <div class="stat-label">Active Today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$4,250</div>
+                    <div class="stat-label">Monthly Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4.8/5</div>
+                    <div class="stat-label">Avg Rating</div>
+                </div>
+            </div>
+
+            <section class="section" style="background: var(--card-bg); border-radius: 12px; padding: 2rem;">
+                <h3>Recent User Activity</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 2rem;">
+                    <thead>
+                        <tr style="text-align: left; color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <th style="padding: 1rem;">User</th>
+                            <th style="padding: 1rem;">Action</th>
+                            <th style="padding: 1rem;">Title</th>
+                            <th style="padding: 1rem;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 1rem;">John Doe</td>
+                            <td style="padding: 1rem;">Watched</td>
+                            <td style="padding: 1rem;">Stranger Things</td>
+                            <td style="padding: 1rem;"><span class="badge" style="background: green;">Completed</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 1rem;">Jane Smith</td>
+                            <td style="padding: 1rem;">Reviewed</td>
+                            <td style="padding: 1rem;">The Dark Knight</td>
+                            <td style="padding: 1rem;"><span class="badge" style="background: var(--primary-color);">Pending Approval</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

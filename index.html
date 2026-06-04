@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaX | Ultimate Premium Streaming Platform</title>
+    <meta name="description" content="Discover movies, TV shows, and anime with CinemaX. The ultimate premium streaming discovery platform.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">CinemaX</div>
+        
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#tv">TV Shows</a></li>
+            <li><a href="#anime">Anime</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#new">New Releases</a></li>
+            <li><a href="mylist.html">My List</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Titles, people, genres">
+            </div>
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="user-profile" id="userProfileBtn">
+                <img src="https://i.pravatar.cc/40?img=3" alt="User Avatar" style="border-radius: 4px; cursor: pointer;">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" id="heroTitle">Loading...</h1>
+                <div class="hero-meta">
+                    <span class="rating-badge" id="heroRating">...</span>
+                    <span id="heroYear">...</span>
+                    <span>HD</span>
+                    <span id="heroGenres">...</span>
+                </div>
+                <p class="hero-overview" id="heroOverview">
+                    Fetching the most exciting stories from across the universe...
+                </p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary" id="heroPlayBtn">
+                        <i class="fas fa-play"></i> Watch Now
+                    </button>
+                    <button class="btn btn-secondary" id="heroTrailerBtn">
+                        <i class="fas fa-play-circle"></i> Watch Trailer
+                    </button>
+                    <button class="btn btn-secondary" id="heroWatchlistBtn">
+                        <i class="fas fa-plus"></i> Add To Watchlist
+                    </button>
+                </div>
+            </div>
+            <img src="" alt="" class="hero-backdrop" id="heroBackdrop">
+        </section>
+
+        <!-- Provider Filters -->
+        <section class="section" id="providers">
+            <div class="provider-filters" style="display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0;">
+                <button class="btn btn-secondary active">All Content</button>
+                <button class="btn btn-secondary">Netflix</button>
+                <button class="btn btn-secondary">Prime Video</button>
+                <button class="btn btn-secondary">Disney+</button>
+                <button class="btn btn-secondary">Apple TV+</button>
+                <button class="btn btn-secondary">HBO</button>
+                <button class="btn btn-secondary">Hulu</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Rows -->
+        <section class="section">
+            <div class="section-title">
+                Trending Movies
+                <a href="#">See All <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="movie-grid" id="trendingMovies">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                Top Rated TV Shows
+                <a href="#">See All <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="movie-grid" id="topRatedTV">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                Upcoming Titles
+                <a href="#">See All <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="movie-grid" id="upcomingMovies">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 4% 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+            <div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">CinemaX</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    The premium destination for movie and TV series discovery. Experience the cinematic world like never before.
+                </p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Explore</h4>
+                <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Anime</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Help</h4>
+                <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Term of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Follow Us</h4>
+                <div style="display: flex; gap: 1.5rem; font-size: 1.5rem;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 4rem; color: var(--text-secondary); font-size: 0.8rem;">
+            &copy; 2026 CinemaX. All rights reserved. Data provided by TMDB and Trakt.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

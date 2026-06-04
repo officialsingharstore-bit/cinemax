@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trakt Authentication | CinemaX</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="text-align: center;">
+        <h1 style="color: var(--primary-color);">CinemaX</h1>
+        <p id="status">Syncing with Trakt...</p>
+    </div>
+
+    <script type="module">
+        import trakt from '../../js/api/trakt.js';
+        
+        async function handleAuth() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const status = document.getElementById('status');
+
+            if (code) {
+                const result = await trakt.exchangeCodeForToken(code);
+                if (result) {
+                    status.textContent = 'Successfully synced with Trakt! Redirecting...';
+                    setTimeout(() => window.location.href = '../../index.html', 2000);
+                } else {
+                    status.textContent = 'Authentication failed. Please try again.';
+                }
+            } else {
+                status.textContent = 'No authorization code found.';
+            }
+        }
+
+        handleAuth();
+    </script>
+</body>
+</html>
